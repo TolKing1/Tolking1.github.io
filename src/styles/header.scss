@@ -83,6 +83,7 @@
       width: 63px;
       aspect-ratio: 1/1;
       animation: logoAnim 4s infinite ease-in-out;
+      z-index: 1;
     }
 
     &__title {
