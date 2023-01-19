@@ -1,0 +1,56 @@
+@import "kit/mixins", "kit/variables";
+
+.footer {
+  padding: 39px 0 74px;
+  background-color: $footCol;
+
+  &__logo {
+    @include font(18px, 400, 16px);
+
+    font-family: $fontFText;
+    color: $footLogoTxtCol;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    position: relative;
+
+    & img {
+      width: 16px;
+    }
+  }
+
+  &__txt {
+    @include font(16px, 400, 19px);
+
+    font-family: $fontFText;
+    font-style: normal;
+    color: $footInfCol;
+  }
+  //Grid
+  .container {
+    display: grid;
+    grid-gap: 21px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 33px 33px;
+    margin-bottom: -21px;
+  }
+
+  &__logo {
+    grid-area: 1 / span 1/1 / span 1;
+  }
+
+  &__address {
+    grid-area: 1 / span 1/2/3;
+  }
+
+  &__email {
+    display: flex;
+    align-items: flex-end;
+    grid-area: 2 / span 1/2/3;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    grid-area: 2 / span 1/4/5;
+  }
+}

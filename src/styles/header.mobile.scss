@@ -1,0 +1,40 @@
+@import "kit/mixins", "kit/variables";
+
+.container {
+  padding: 0 27px;
+}
+
+.header__content {
+  position: relative;
+}
+
+.header {
+  &__nav {
+    @include flex(row, space-between, center);
+
+    z-index: 10;
+  }
+
+  &__name {
+    position: static;
+  }
+  //Item box
+  &__menu {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+
+    @include flex(column, space-around, center);
+
+    left: 0;
+    right: 0;
+    background-color: $textHCol;
+    z-index: 3;
+    transform: translateY(-100px);
+    transition: 400ms cubic-bezier(0.23, 1, 0.32, 1);
+
+    &-item {
+      padding: 10px 0;
+    }
+  }
+}

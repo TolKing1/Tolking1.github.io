@@ -1,0 +1,11 @@
+@import "kit/mixins";
+
+.text {
+  padding: 66px 0 116px;
+
+  &__body {
+    @include flex(column, initial, center);
+
+    margin: 28px 0 29px;
+  }
+}

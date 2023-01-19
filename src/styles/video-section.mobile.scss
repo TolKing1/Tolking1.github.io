@@ -1,0 +1,12 @@
+@import "kit/mixins";
+
+.video {
+  &__body {
+    padding: 71px 0 73px;
+  }
+
+  &__btn {
+    width: 100px;
+    font-size: 40px;
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "complex_work",
+  "version": "1.0.0",
+  "description": "Final project for WEB",
+  "main": "index.html",
+  "scripts": {
+    "prod": "npm run compile & npm run postcss",
+    "compile": "sass src/styles/style.scss src/styles/style.css",
+    "postcss": "postcss src/styles/style.css --dir src/styles/",
+    "lint": "stylelint \"**/*.scss\" --fix",
+    "prettier": "prettier --write src/styles/*.scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/shaxzodsdf/itpu_final-project.git"
+  },
+  "author": "To'lqin Oltiboyev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/shaxzodsdf/itpu_final-project/issues"
+  },
+  "homepage": "https://gitlab.com/shaxzodsdf/itpu_final-project#readme",
+  "dependencies": {
+    "autoprefixer": "^10.4.13",
+    "cssnano": "^5.1.14",
+    "node-sass": "^8.0.0",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
+    "postcss-nested": "^6.0.0"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "prettier": "2.8.2",
+    "stylelint": "^14.16.1",
+    "stylelint-config-standard": "^29.0.0"
+  },
+  "browserslist": [
+    "last 3 versions"
+  ]
+}

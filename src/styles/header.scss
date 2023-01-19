@@ -1,0 +1,105 @@
+@import "kit/mixins", "kit/variables";
+
+@keyframes logoAnim {
+  25% {
+    transform: rotateY(180deg) scale(1.3);
+  }
+
+  50% {
+    transform: rotateY(180deg) scale(1.3);
+  }
+
+  75% {
+    transform: rotateY(0deg) scale(1);
+  }
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  padding: $headerPad 0;
+  background: url("../assets/stars.png") top center / cover;
+  //Header Nav
+  &__nav {
+    text-align: center;
+  }
+
+  &__name {
+    position: absolute;
+    left: 15px;
+
+    @include font(20px, 600, 16px);
+
+    font-family: $fontFText;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $itemCol;
+  }
+
+  &__menu {
+    @include flex(row, center, center);
+
+    &-item {
+      padding: 0 32px;
+      transition: 400ms;
+
+      & > a {
+        @include font(14px, 400, 16px);
+
+        font-family: $fontFText;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: $itemCol;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        transition: 400ms;
+        background-color: #fff;
+      }
+
+      &:hover::after {
+        width: 98%;
+      }
+    }
+  }
+  //Header content
+  &__content {
+    width: 100%;
+    height: 100%;
+
+    @include flex(column, center, center);
+  }
+
+  .content {
+    &__box {
+      @extend .header__content;
+    }
+
+    &__logo {
+      width: 63px;
+      aspect-ratio: 1/1;
+      animation: logoAnim 4s infinite ease-in-out;
+    }
+
+    &__title {
+      margin: 13px 0 42px;
+
+      @include font(48px, 700, 64px);
+
+      text-align: center;
+      color: $headerTitleCol;
+    }
+
+    &__subtitle {
+      @include font(24px, 400, 32px);
+
+      font-family: $fontFText;
+      text-align: center;
+      color: $headerSubCol;
+    }
+  }
+}

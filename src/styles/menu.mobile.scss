@@ -1,0 +1,12 @@
+@import "kit/mixins";
+
+//Button appears
+.menu-button-container {
+  display: flex;
+}
+//When button clicked
+#menu-toggle:checked ~ .header__menu {
+  opacity: 1;
+  transform: translateY(100px);
+  transition: 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}

@@ -1,0 +1,17 @@
+@import "kit/mixins";
+
+.footer {
+  padding: 58px 0 74px;
+
+  text-align: center;
+
+  &__logo {
+    margin-bottom: 12px;
+  }
+
+  .container {
+    @include flex(column, initial, center);
+    margin-bottom: 0;
+    gap: 18px;
+  }
+}

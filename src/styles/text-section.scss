@@ -1,0 +1,52 @@
+@import "kit/variables", "kit/mixins";
+.text {
+  //Text Head
+  padding: 66px 0 98px;
+  .container {
+    @include flex(column, center, center);
+  }
+  &__head {
+    text-align: center;
+  }
+  &__title {
+    @include font(48px, 700, 64px);
+    font-style: normal;
+    color: $textHCol;
+  }
+  &__subtitle {
+    @include font(24px, 400, 32px);
+    color: $textArtCol;
+  }
+  //Text Body
+  &__body {
+    width: 100%;
+    margin: 45px 0 46px;
+    @include flex(row, space-between, flex-start);
+    gap: 27px;
+  }
+  &__content {
+    max-width: 416px;
+    @include font(16px, 400, 22px);
+    color: $textArtCol;
+  }
+  //Button
+  &__btn {
+    padding: 12px 23px;
+    @include font(14px, 400, 26px);
+    font-family: $fontF;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    border-radius: 23px;
+    background-color: $figure;
+    color: $btnTxtCol;
+
+    transform-origin: left top;
+    transition: transform 400ms ease-in-out;
+
+    //Animation
+    &:hover {
+      transform: rotate(10deg);
+    }
+  }
+}
